@@ -17,7 +17,7 @@ const app = Vue.createApp({
 
             console.log(results);
 
-            this.firstnmae = results[0].name.first
+            this.firstname = results[0].name.first
             this.lastname = results[0].name.last
             this.email = results[0].email
             this.gender = results[0].gender

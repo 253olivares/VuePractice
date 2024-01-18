@@ -17,7 +17,12 @@ export default{
     },
     data(){
         return {
-            page: null,
+            page: {
+                link : {text: "Home", url: "index.html"},
+                pageContent : "This is the home content",
+                pageTitle : "Home Page",
+                published : true
+            },
         }
     },
     watch: {

@@ -20,6 +20,7 @@ import FilterTodos from './components/FiltersTodos.vue';
 export default {
   name: 'App',
   components: {
+    // implementing components 
     Todos,
     AddTodo,
     FilterTodos

@@ -1,5 +1,7 @@
 <template>
     <div>
+        <!-- Our Add Todo component that sits at the very top of our page here we create a submit and bind our title to our data
+        When the user clicks submit we pass our title to our state manager which then updates the array -->
         <h3>Add Todo</h3>
         <div class="add">
             <form @submit="onSubmit">
@@ -12,18 +14,24 @@
 
 <script>
 import {mapActions} from 'vuex';
-
+d
 export default {
     name:"AddTodo",
+    // data create to keep track of the new title name placed in the input
     data(){
         return {
             title:'',
         }
     },
+    // Creating methods 
+    // att the start we can see we are calling in our action from the state manger
+    // we do this so that we can then later call this action in our on submit function
     methods: {
         ...mapActions(['addTodo']),
         onSubmit(e){
             e.preventDefault();
+            // on submit function calling our addTodo Action from state manager
+            // we pass our title bind from the input so that we can then create a new object in our array
             this.addTodo(this.title);
         }
     }

@@ -1,5 +1,7 @@
 <template>
     <div>
+        <!-- filter component with a change listener that will run filter todos everytime vue detects that our select has changed
+        We pass our event that targets the inner html in state manager -->
         Filter Todos:
         <select @change="filterTodos($event)">
             <option value="200">200</option>
@@ -14,9 +16,11 @@
 
 <script>
 import {mapActions} from 'vuex';
-
+// import our actions
 export default {
     name:"FilterTodos",
+    // since this is the only method we dont need to spread our actions we can just call filterTodos and then use it in our change
+    // event listener
     methods:mapActions(["filterTodos"]),
 }
 </script>

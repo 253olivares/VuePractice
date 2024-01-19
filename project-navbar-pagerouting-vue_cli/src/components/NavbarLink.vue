@@ -1,5 +1,7 @@
 <template>
+    <!-- nav bar link -->
     <li>
+        <!-- router link is a route component that changes our router to point to specific index in our pages array -->
         <router-link
             :to="`/${index}`"
             class="nav-link" 
@@ -14,6 +16,8 @@
 <script>
 
 export default {
+    // we pass our pages object to display specific text
+    // additionally pass our index
     props: ['page','index'],
 }
 </script>

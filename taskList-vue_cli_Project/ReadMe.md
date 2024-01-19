@@ -7,16 +7,16 @@ requests to update text file.
 
 server module should already be included in package json so all needs to be done is make sure
 
-$ npm install
+$ `npm install`
 
 is ran in the root
 
 afterwards the command to start the fake api server is
 
-$ json-server --watch db.json --port 5000
+$ `json-server --watch db.json --port 5000`
 
 followed by
 
-$ npm run dev
+$ `npm run dev`
 
 top start the server. Once both the api server and vue server run app should be functional.

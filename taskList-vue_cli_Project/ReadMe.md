@@ -5,7 +5,7 @@ allow the app to have access to our db JSON where it writes and keeps track of o
 can keep track of these values at all times even after the page reloads. If the server is not running app can not make fetch
 requests to update the text file.
 
-Fundamentals this app helped me understand: Vue structure, Vue props, Prop drilling, Emit passing, v-show
+Fundamentals this app helped me understand: `Vue structure, Vue props, Prop drilling, Emit passing, v-show`
 
 server module should already be included in the package JSON so all that needs to be done is to make sure
 

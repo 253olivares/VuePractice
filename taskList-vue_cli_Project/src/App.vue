@@ -1,5 +1,15 @@
+<!-- Todo Task manager that uses a fake fetch api tied to the db json on root. Project begins by npm install to make sure all dependencies in package json is installed properly  -->
+
+
+<!-- My template where I lout my router header and footer -->
 <template>
   <div class="container">
+    <!-- all our components that was loaded for this application 
+    \Future Note for myself: router view isnt a component we load separately it is included in the module we loaded in app of router from rout.js
+   -->
+    <!-- toggleAddTask Listening for event emit from our header component 
+    Additionally we are passing down title props and show addtask
+    -->
     <Header @toggleAddTask="toggleAddTask" title="Task Tracker" :showAddTask="showAddTask" > </Header>
     <router-view :showAddTask="showAddTask"></router-view>
     <Footer></Footer>
@@ -11,16 +21,21 @@ import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 
 export default {
+  // normal naming convention
   name: 'App',
   components: {
+    // components being loaded
     Header,
     Footer
   },
+  // creating a data that keeps track of our add button component in our header if true show if false dont show. 
+  // currently this date is binded to the header and passed down into the header component
   data() {
     return {
       showAddTask:false,
     }
   },
+  // method that when calls switches our bool value of show add task. This is suppose to show and hide our add task component
   methods:{
     toggleAddTask(){
       this.showAddTask = !this.showAddTask

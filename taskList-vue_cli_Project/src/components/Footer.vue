@@ -5,6 +5,8 @@
     </footer>
 </template>
 
+<!-- footer component nothing special here just a router link that routes us to /about to display app version -->
+
 <style scoped>
     a{
         color: #333;

@@ -1,5 +1,10 @@
 <template>
+
+    <!-- addTask component submit listens for the submit variable that triggers on submit function we have in methods -->
     <form @submit="onSubmit" class="add-form">
+        <!-- typical form with only adjustments is using v-model to bind our text input to data below
+        this makes it easy to keep track of these values and create a new object and submit to parent component when we click submit
+        -->
         <div class="form-control">
             <label>Task</label>
             <input v-model="text" type="text" name="text" placeholder="Add Task" />
@@ -21,7 +26,9 @@
 
 <script>
     export default {
+        // typical export
         name: 'AddTask',
+        // data sets text day and reminder and binds them to the form
         data() {
             return{
                 text:'',
@@ -30,6 +37,7 @@
             }
         },
         methods: {
+            // on submit when we trigger the event listener above we create a new task object and pass that objet to parent component by emmiting add task which holds the new object
             onSubmit(e){
                 e.preventDefault();
                 if(!this.text){

@@ -3,6 +3,7 @@
         <!-- filter component with a change listener that will run filter todos everytime vue detects that our select has changed
         We pass our event that targets the inner html in state manager -->
         Filter Todos:
+        <!-- $Event is a special viable that passes the dom element in this case we are passing select and its children -->
         <select @change="filterTodos($event)">
             <option value="200">200</option>
             <option value="100">100</option>

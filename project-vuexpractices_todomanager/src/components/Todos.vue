@@ -54,6 +54,7 @@ import { mapGetters, mapActions } from "vuex";
     },
     // computed is our getter runs at the start when said computer is run to return a value
     computed: mapGetters(["allTodos"]),
+    // our life cycle
     created(){
       // fetches our todo during the mount app life cycle
       this.fetchTodos();

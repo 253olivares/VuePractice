@@ -15,7 +15,7 @@ is ran in the root
 
 afterwards, the command to start the fake api server is
 
-$ `json-server --watch db.json --port 5000`
+$ `npx json-server --watch db.json --port 5000`
 
 followed by
 

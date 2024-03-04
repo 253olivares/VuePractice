@@ -14,7 +14,7 @@
 
 <script>
 import {mapActions} from 'vuex';
-d
+
 export default {
     name:"AddTodo",
     // data create to keep track of the new title name placed in the input
@@ -33,6 +33,8 @@ export default {
             // on submit function calling our addTodo Action from state manager
             // we pass our title bind from the input so that we can then create a new object in our array
             this.addTodo(this.title);
+            
+            this.title = '';
         }
     }
 };

@@ -24,7 +24,7 @@ export default {
     Todos,
     AddTodo,
     FilterTodos
-}
+  }
 };
 </script>
 
